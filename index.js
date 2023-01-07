@@ -108,3 +108,13 @@ for (let i =1; i <totalMonths; i++) {
 //used the reduce function to sum all the values in the changes array starting from zero and divided that by the length of the array to get the average; I also removed most of the decimals, leaving only 2
 let averageChange = (changes.reduce((x,y) => x+y, 0) / changes.length).toFixed(2);
 console.log("Average change: $" + averageChange);
+//Get the max change in profit
+let greatestIncrease = Math.max.apply(null, changes)
+//Get the date when the max increase in profits occurred
+let gIncreaseMonth = finances[changes.indexOf(greatestIncrease)][0];
+console.log("Greatest increase in profits: " + gIncreaseMonth +" $" + greatestIncrease);
+//Get the min change in profit
+let greatestDecrease = Math.min.apply(null, changes)
+//Get the date when the max increase in profits occurred
+let gDecreaseMonth = finances[changes.indexOf(greatestDecrease)][0];
+console.log("Greatest decrease in profits: " + gDecreaseMonth +" $" + greatestDecrease);
