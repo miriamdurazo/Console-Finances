@@ -87,5 +87,14 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-let totalMonths = finances.length
-console.log(totalMonths);
+console.log("Financial analysis")
+console.log("------------------------------");
+let totalMonths = finances.length;
+console.log("Total months: " + totalMonths);
+let profits = 0;
+// Created a loop that goes throught the finances array and sums up the values to find the total profits/losses
+for (let i = 0; i < totalMonths; i++) {
+    profits += finances[i][1];
+}
+ console.log("Total: $" + profits) 
+
