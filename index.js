@@ -96,5 +96,13 @@ let profits = 0;
 for (let i = 0; i < totalMonths; i++) {
     profits += finances[i][1];
 }
- console.log("Total: $" + profits) 
+console.log("Total: $" + profits); 
+// Created an array with the first value of the finances array as the first `change in profits`
+let changes = [finances[0][1]];
+//Created a looped to go over the rest of the values and subtract the profits from the previous months from the current month value
+for (let i =1; i <totalMonths; i++) {
+    changes.push(finances[i][1]-finances[i-1][1]);
+}
+//Quick check to see if the length of the finances and the changes arrays are the same
+// console.log(changes.length === finances.length)
 
