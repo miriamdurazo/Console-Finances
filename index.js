@@ -105,6 +105,6 @@ for (let i =1; i <totalMonths; i++) {
 }
 //Quick check to see if the length of the finances and the changes arrays are the same
 // console.log(changes.length === finances.length)
-//used the reduce function to sum all the values in the changes array starting from zero and divided that by the length of the array to get the average
-let averageChange = changes.reduce((x,y) => x+y, 0) / changes.length
+//used the reduce function to sum all the values in the changes array starting from zero and divided that by the length of the array to get the average; I also removed most of the decimals, leaving only 2
+let averageChange = (changes.reduce((x,y) => x+y, 0) / changes.length).toFixed(2);
 console.log("Average change: $" + averageChange);
