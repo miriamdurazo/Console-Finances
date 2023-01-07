@@ -109,12 +109,12 @@ for (let i =1; i <totalMonths; i++) {
 let averageChange = (changes.reduce((x,y) => x+y, 0) / changes.length).toFixed(2);
 console.log("Average change: $" + averageChange);
 //Get the max change in profit
-let greatestIncrease = Math.max.apply(null, changes)
+let greatestIncrease = Math.max.apply(null, changes);
 //Get the date when the max increase in profits occurred
 let gIncreaseMonth = finances[changes.indexOf(greatestIncrease)][0];
 console.log("Greatest increase in profits: " + gIncreaseMonth +" $" + greatestIncrease);
 //Get the min change in profit
-let greatestDecrease = Math.min.apply(null, changes)
+let greatestDecrease = Math.min.apply(null, changes);
 //Get the date when the max increase in profits occurred
 let gDecreaseMonth = finances[changes.indexOf(greatestDecrease)][0];
 console.log("Greatest decrease in profits: " + gDecreaseMonth +" $" + greatestDecrease);
