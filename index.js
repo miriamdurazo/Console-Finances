@@ -112,9 +112,9 @@ console.log("Average change: $" + averageChange.toFixed(2));
 let greatestIncrease = Math.max.apply(null, changes);
 //Get the date when the max increase in profits occurred
 let gIncreaseMonth = finances[changes.indexOf(greatestIncrease)][0];
-console.log("Greatest increase in profits: " + gIncreaseMonth +" $" + greatestIncrease);
+console.log(`Greatest increase in profits: ${gIncreaseMonth} (\$${greatestIncrease})`);
 //Get the min change in profit
 let greatestDecrease = Math.min.apply(null, changes);
 //Get the date when the max increase in profits occurred
 let gDecreaseMonth = finances[changes.indexOf(greatestDecrease)][0];
-console.log("Greatest decrease in profits: " + gDecreaseMonth +" $" + greatestDecrease);
+console.log(`Greatest decrease in profits: ${gDecreaseMonth} (\$${greatestDecrease})`);
